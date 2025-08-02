@@ -1,7 +1,7 @@
 # !Предупреждаю!, если здесь у меня написано «User», то это не значит, что у вас на Raspberry Pi и у меня на компьютере то же самое. На Raspberry Pi у вас может быть другой никнейм самого аккаунта, и на ПК то же самое. Измените на свои.
 
 param(
-    [string]$PiHost = "user@192.168.0.127", # Здесь на Raspberry Pi
+    [string]$PiHost = "user@192.168.0.1XX", # Здесь на Raspberry Pi
     [string]$PiLauncherCmd = "python3 /home/user/deck.py"# Здесь на Raspberry Pi
 )
 
@@ -39,3 +39,4 @@ ssh $PiHost $PiLauncherCmd | ForEach-Object {
         default       { Write-Warning "Неизвестная команда: $cmd" }
     }
 }
+
